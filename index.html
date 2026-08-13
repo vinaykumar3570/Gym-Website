@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CoreX - A Gym website</title>
+
+    <!-- All in one css  -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Homepage css  -->
+    <link rel="stylesheet" href="css/home.css">
+
+    <!-- fontawesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" />
+
+    <!-- Bootstrap Link  -->
+    <link rel="stylesheet" href="bootstrap/Bootstrap.css">
+
+    <style>
+        .top-details {
+            height: 40px;
+            width: 100%;
+            color: var(--grey-color);
+            background: var(--darkgrey-color);
+        }
+
+        .top-details span {
+            font-size: 14px;
+        }
+
+        .divider {
+            height: 70%;
+            width: 1px;
+            background: var(--grey-color);
+        }
+
+        nav {
+            background: transparent;
+            /* border: 1px solid yellow; */
+            display: flex;
+            color: var(--white-color);
+            padding: 15px 0;
+            z-index: 11;
+        }
+
+        .logo {
+            color: var(--white-color);
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        nav ul li a {
+            transition: .5s;
+            position: relative;
+            color: var(--white-color);
+            text-decoration: none;
+        }
+
+        nav ul li a::before {
+            position: absolute;
+            content: "";
+            top: 100%;
+            left: 0;
+            width: 100%;
+            margin: 0 auto;
+            height: 3px;
+            background: var(--primary-color);
+            transform: scaleX(0);
+            transition: transform 0.5s;
+        }
+
+        nav ul li a::before {
+            bottom: -3px;
+            transform-origin: right;
+        }
+
+
+        nav ul li a:hover::before {
+            transform: scaleX(1);
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        a.active {
+            color: var(--primary-color);
+        }
+
+        nav ul li a.active::before {
+            transform: scaleX(1);
+            color: var(--primary-color);
+        }
+
+        section.hero {
+            z-index: 1;
+            background: #000;
+        }
+
+        img {
+            opacity: .3;
+        }
+
+        .hero-slide:nth-child(1) {
+            background-image: url("assests/images/slider1.jpg");
+            background-position: center center;
+        }
+
+        .hero-slide:nth-child(2) {
+            background-image: url("assests/images/slider2.jpg");
+            background-position: center center;
+        }
+
+        .hero-slide:nth-child(3) {
+            background-image: url("assests/images/slider3.jpg");
+            background-position: center center;
+        }
+
+        /* Why choose us section CSS */
+        section .container {
+            padding: 100px 0;
+        }
+
+        #gototop {
+            height: 50px;
+            width: 50px;
+            background: var(--white-color);
+            color: var(--primary-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            bottom: 10%;
+            right: 5%;
+            z-index: 5;
+            border-radius: 5px;
+        }
+    </style>
+
+</head>
+
+<body onscroll="scrollFunction()">
+    <a href="#top" id="gototop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    <div id="top" class="top-details d-flex justify-content-around align-items-center">
+        <span> <i class="fas fa-location-dot"></i> Near Ganga Nagar, Mawana Road Meerut </span>
+        <span class="divider"></span>
+        <span> <i class="fas fa-phone"></i> +91-9874561230, +918974561230 </span>
+        <span class="divider"></span>
+        <span> <i class="fas fa-envelope"></i> corex.support@gmail.com </span>
+    </div>
+    <header class="position-relative">
+        <!-- Hero Slider -->
+        <section class="gym-hero hero" id="gymHero" aria-label="Fitness hero slider">
+            <!-- Background slides -->
+            <div class="hero-slides" aria-hidden="true">
+                <div class="hero-slide active"></div>
+                <div class="hero-slide"></div>
+                <div class="hero-slide"></div>
+            </div>
+
+            <!-- Dark overlay -->
+            <div class="hero-overlay" aria-hidden="true"></div>
+
+            <!-- Hero content -->
+            <div class="container-fluid hero-content">
+                <div class="hero-copy ms-lg-3" id="heroCopy">
+                    <p class="hero-kicker">
+                        <span class="accent">FITNESS</span> START
+                    </p>
+
+                    <h1 class="hero-title">
+                        WITH <span class="accent">ONE STEP</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Whether you're a beginner or a professional athlete,
+                        we provide everything you need to become stronger
+                        and healthier.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#trial" class="button button-primary">
+                            Claim 3 Day Trial
+                        </a>
+
+                        <a href="#join" class="button button-secondary">
+                            Join Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="hero-pagination" id="heroPagination" aria-label="Slide navigation">
+                <button class="pagination-dot active" type="button" data-slide="0" aria-label="Go to slide 1"
+                    aria-current="true"></a>
+
+                    <button class="pagination-dot" type="button" data-slide="1" aria-label="Go to slide 2"
+                        aria-current="false"></button>
+
+                    <button class="pagination-dot" type="button" data-slide="2" aria-label="Go to slide 3"
+                        aria-current="false"></button>
+            </div>
+
+            <!-- Previous / next controls -->
+            <div class="hero-arrows" aria-label="Previous and next slides">
+                <button class="hero-arrow" id="prevSlide" type="button" aria-label="Previous slide">
+                    <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                </button>
+
+                <button class="hero-arrow" id="nextSlide" type="button" aria-label="Next slide">
+                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- Navbar Starts -->
+        <nav class="position-absolute top-0 w-100 d-flex justify-content-between align-items-center px-5">
+            <div class="logo fs-2 fw-semibold">Core<span>X</span></div>
+            <ul class="d-flex w-50 justify-content-between align-items-center m-0">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Gallery</a></li>
+                <a href="#" class="button button-primary">Register Now</a>
+            </ul>
+        </nav>
+
+
+    </header>
+
+    <section class="quotes">
+        <div class="quotes-slide">
+        </div>
+    </section>
+
+    <section class="why-choose">
+        <div class="container px-3 px-sm-0">
+            <h2 class="section-title"> Why Choose Us ?</h2>
+            <p class="section-para"> Discover what make us the perfect place to achieve your fitness goals.</p>
+            <div class="row mt-5">
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- <div class="card-box"> -->
+                    <div class="card">
+                        <div class="card-content d-flex flex-column justify-content-between">
+                            <i class="fas fa-screwdriver-wrench card-icon"></i>
+                            <div>
+                                <h4 class="fw-medium"> Modern Equipment </h4>
+                                <p>Train with premium machines and the latest fitness equipment for maximum performance.
+                                </p>
+                            </div>
+                            <a href="#"> Explore Now
+                                <i class="fas fa-arrow-right-long card-arrow-icon"></i></a>
+                        </div>
+                        <div class="number-box">
+                            <span class="number"></span>
+                        </div>
+                        <!-- </div>  -->
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- <div class="card-box"> -->
+                    <div class="card">
+                        <div class="card-content d-flex flex-column justify-content-between">
+                            <i class="fas fa-users card-icon"></i>
+                            <div>
+                                <h4 class="fw-medium"> Expert Trainers</h4>
+                                <p>Certified trainers guide every workout with personalized fitness plans and
+                                    motivation.</p>
+                            </div>
+                            <a href="#"> Explore Now
+                                <i class="fas fa-arrow-right-long card-arrow-icon"></i></a>
+                        </div>
+                        <div class="number-box">
+                            <span class="number"></span>
+                        </div>
+                        <!-- </div>  -->
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- <div class="card-box"> -->
+                    <div class="card">
+                        <div class="card-content d-flex flex-column justify-content-between">
+                            <i class="fas fa-clock-rotate-left card-icon"></i>
+                            <div>
+                                <h4 class="fw-medium">Flexible Timing</h4>
+                                <p>Choose workout sessions that fit your schedule with convenient opening hours.</p>
+                            </div>
+                            <a href="#"> Explore Now
+                                <i class="fas fa-arrow-right-long card-arrow-icon"></i></a>
+                        </div>
+                        <div class="number-box">
+                            <span class="number"></span>
+                        </div>
+                    </div>
+                    <!-- </div>  -->
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- <div class="card-box"> -->
+                    <div class="card">
+                        <div class="card-content d-flex flex-column justify-content-between">
+                            <i class="fas fa-user-doctor card-icon"></i>
+                            <div>
+                                <h4 class="fw-medium"> Healthy Lifestyle </h4>
+                                <p>Improve strength, endurance, and overall wellness through balanced fitness programs.
+                                </p>
+                            </div>
+                            <a href="#"> Explore Now
+                                <i class="fas fa-arrow-right-long card-arrow-icon"></i></a>
+                        </div>
+                        <div class="number-box">
+                            <span class="number"></span>
+                        </div>
+                    </div>
+                    <!-- </div>  -->
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- <div class="card-box"> -->
+                    <div class="card">
+                        <div class="card-content d-flex flex-column justify-content-between">
+                            <i class="fas fa-money-check-dollar card-icon mb-0"></i>
+                            <div>
+                                <h4 class="fw-medium"> Affordable Membership </h4>
+                                <p>Emjoy premium facilities with flexible membership plans that fit every budget.</p>
+                            </div>
+                            <a href="#"> Explore Now
+                                <i class="fas fa-arrow-right-long card-arrow-icon"></i>
+                            </a>
+                        </div>
+                        <div class="number-box">
+                            <span class="number"></span>
+                        </div>
+                    </div>
+                    <!-- </div>  -->
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- <div class="card-box"> -->
+                    <div class="card">
+                        <div class="card-content d-flex flex-column justify-content-between">
+                            <i class="fas fa-hand-holding-hand card-icon"></i>
+                            <div>
+                                <h4 class="fw-medium"> Supportive Community </h4>
+                                <p>Stay inspired with a friendly fitness community that motivates you everyday.</p>
+                            </div>
+                            <a href="#"> Explore Now
+                                <i class="fas fa-arrow-right-long card-arrow-icon"></i></a>
+                        </div>
+                        <div class="number-box">
+                            <span class="number"></span>
+                        </div>
+                    </div>
+                    <!-- </div>  -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="join-today px-lg-5 px-md-4 px-sm-3 px-2">
+        <div class="content text-center px-lg-5 px-md-4 px-sm-3 px-2">
+            <h1 class="text-uppercase fw-semibold"> Ready to start your fitness journey?</h1>
+            <p class="fs-5">Become part of our growing fitness family and experience guidance, modern facilities, and
+                personalized workout programs designed to help you achieve your goals.</p>
+            <a href="#" class="button button-secondary mt-3"> Join Today </a>
+        </div>
+    </section>
+
+    <footer class="p-4">
+        <div class="row mb-5">
+            <div class="col-12 col-md-5  logo-details pe-5">
+                <div class="d-flex">
+                    <span class="logo-side"></span>
+                    <div class="logo fs-2 fw-semibold">Core<span>X</span></div>
+                </div>
+                <p>
+                    A high-energy, elite strength and conditioning facility designed to push your athletic boundaries.
+                    No fluff. Just iron and result
+                </p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 py-2">
+                <h4 class="fw-semibold"> opening hours </h4>
+                <p> Mon - Sat : 06:00 AM to 10:00 PM</p>
+                <p> Sun : 07:00 AM to 08:00 PM</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 py-2">
+                <h4 class="fw-semibold mb-4"> follow the corex </h4>
+                <a href="#" class="social-icon"> <i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"> <i class="fab fa-youtube"></i></a>
+                <a href="#" class="social-icon"> <i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"> <i class="fab fa-x-twitter"></i></a>
+            </div>
+        </div>
+
+        <div class="row footer-bottom">
+            <div class="col-8 text-uppercase">
+                &copy; 2026 corex fitness. all right reserved
+            </div>
+            <div class="col-2">
+                <a href="#"> Privacy Policy </a>
+            </div>
+            <div class="col-2">
+                <a href="#"> Terms of Service </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+
+    <script>
+        // On scroll navbar color change
+        function scrollFunction() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                document.getElementById("gototop").style.display = "flex";
+            } else {
+                document.getElementById("gototop").style.display = "none";
+            }
+        }
+        scrollFunction();
+    </script>
+</body>
+
+</html>
