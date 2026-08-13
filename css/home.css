@@ -806,7 +806,7 @@ footer .social-icon{
     margin-top: 150px;
     transition: .5s;
 }
-footer a:hover{
+footer .social-icon:hover{
     background: var(--primary-color);
 }
 
@@ -816,4 +816,8 @@ footer a:hover{
 .footer-bottom a{
     color:var(--grey-color);
     text-decoration: none;
+    transition: .5s;
+}
+.footer-bottom a:hover{
+    color: var(--primary-color);
 }

@@ -1,3 +1,13 @@
+// On scroll navbar color change
+function scrollFunction() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        document.getElementById("gototop").style.display = "flex";
+    } else {
+        document.getElementById("gototop").style.display = "none";
+    }
+}
+scrollFunction();
+
 // Hero Slider JS
 (() => {
     "use strict";
@@ -106,8 +116,8 @@
         (event) => {
             touchStartX = event.changedTouches[0].screenX;
         }, {
-            passive: true
-        }
+        passive: true
+    }
     );
 
     hero.addEventListener(
@@ -127,8 +137,8 @@
                 previousSlide();
             }
         }, {
-            passive: true
-        }
+        passive: true
+    }
     );
 
     // Keyboard navigation when the hero is focused.
@@ -152,11 +162,11 @@
 // Quotes Slider JS
 const logoSlide = document.querySelector(".quotes-slide");
 
-let brands = [  "Train hard, stay strong, never quit.",
-                "Every rep builds a better you.",
-                "Strength begins with self-discipline.",
-                "Progress starts with one workout.",
-                "Be stronger than your excuses."];
+let brands = ["Train hard, stay strong, never quit.",
+    "Every rep builds a better you.",
+    "Strength begins with self-discipline.",
+    "Progress starts with one workout.",
+    "Be stronger than your excuses."];
 let dynamicBrand = ""
 brands.forEach(brand => {
     dynamicBrand +=

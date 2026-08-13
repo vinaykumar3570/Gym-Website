@@ -20,82 +20,6 @@
     <link rel="stylesheet" href="bootstrap/Bootstrap.css">
 
     <style>
-        .top-details {
-            height: 40px;
-            width: 100%;
-            color: var(--grey-color);
-            background: var(--darkgrey-color);
-        }
-
-        .top-details span {
-            font-size: 14px;
-        }
-
-        .divider {
-            height: 70%;
-            width: 1px;
-            background: var(--grey-color);
-        }
-
-        nav {
-            background: transparent;
-            /* border: 1px solid yellow; */
-            display: flex;
-            color: var(--white-color);
-            padding: 15px 0;
-            z-index: 11;
-        }
-
-        .logo {
-            color: var(--white-color);
-        }
-
-        .logo span {
-            color: var(--primary-color);
-        }
-
-        nav ul li a {
-            transition: .5s;
-            position: relative;
-            color: var(--white-color);
-            text-decoration: none;
-        }
-
-        nav ul li a::before {
-            position: absolute;
-            content: "";
-            top: 100%;
-            left: 0;
-            width: 100%;
-            margin: 0 auto;
-            height: 3px;
-            background: var(--primary-color);
-            transform: scaleX(0);
-            transition: transform 0.5s;
-        }
-
-        nav ul li a::before {
-            bottom: -3px;
-            transform-origin: right;
-        }
-
-
-        nav ul li a:hover::before {
-            transform: scaleX(1);
-        }
-
-        nav ul li a:hover {
-            color: var(--primary-color);
-        }
-
-        a.active {
-            color: var(--primary-color);
-        }
-
-        nav ul li a.active::before {
-            transform: scaleX(1);
-            color: var(--primary-color);
-        }
 
         section.hero {
             z-index: 1;
@@ -104,6 +28,10 @@
 
         img {
             opacity: .3;
+        }
+
+        .hero-slides{
+            height: 900px;
         }
 
         .hero-slide:nth-child(1) {
@@ -126,20 +54,6 @@
             padding: 100px 0;
         }
 
-        #gototop {
-            height: 50px;
-            width: 50px;
-            background: var(--white-color);
-            color: var(--primary-color);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: fixed;
-            bottom: 10%;
-            right: 5%;
-            z-index: 5;
-            border-radius: 5px;
-        }
     </style>
 
 </head>
@@ -224,9 +138,9 @@
         <!-- Navbar Starts -->
         <nav class="position-absolute top-0 w-100 d-flex justify-content-between align-items-center px-5">
             <div class="logo fs-2 fw-semibold">Core<span>X</span></div>
-            <ul class="d-flex w-50 justify-content-between align-items-center m-0">
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">About</a></li>
+            <ul class="d-flex justify-content-between align-items-center m-0">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="#">Pricing</a></li>
                 <li><a href="#">Gallery</a></li>
                 <a href="#" class="button button-primary">Register Now</a>
@@ -373,7 +287,7 @@
 
     <footer class="p-4">
         <div class="row mb-5">
-            <div class="col-12 col-md-5  logo-details pe-5">
+            <div class="col-12 col-lg-5 logo-details pe-5">
                 <div class="d-flex">
                     <span class="logo-side"></span>
                     <div class="logo fs-2 fw-semibold">Core<span>X</span></div>
@@ -383,12 +297,12 @@
                     No fluff. Just iron and result
                 </p>
             </div>
-            <div class="col-12 col-sm-6 col-md-4 py-2">
+            <div class="col-12 col-sm-6 col-lg-4 py-2 mt-4">
                 <h4 class="fw-semibold"> opening hours </h4>
                 <p> Mon - Sat : 06:00 AM to 10:00 PM</p>
                 <p> Sun : 07:00 AM to 08:00 PM</p>
             </div>
-            <div class="col-12 col-sm-6 col-md-3 py-2">
+            <div class="col-12 col-sm-6 col-lg-3 py-2 mt-4">
                 <h4 class="fw-semibold mb-4"> follow the corex </h4>
                 <a href="#" class="social-icon"> <i class="fab fa-facebook-f"></i></a>
                 <a href="#" class="social-icon"> <i class="fab fa-youtube"></i></a>
@@ -398,13 +312,13 @@
         </div>
 
         <div class="row footer-bottom">
-            <div class="col-8 text-uppercase">
+            <div class="col-12 col-md-8 text-uppercase">
                 &copy; 2026 corex fitness. all right reserved
             </div>
-            <div class="col-2">
+            <div class="col-6 mt-3 col-md-2">
                 <a href="#"> Privacy Policy </a>
             </div>
-            <div class="col-2">
+            <div class="col-6 mt-3 col-md-2">
                 <a href="#"> Terms of Service </a>
             </div>
         </div>
@@ -412,18 +326,6 @@
 
     <script src="js/script.js"></script>
 
-
-    <script>
-        // On scroll navbar color change
-        function scrollFunction() {
-            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-                document.getElementById("gototop").style.display = "flex";
-            } else {
-                document.getElementById("gototop").style.display = "none";
-            }
-        }
-        scrollFunction();
-    </script>
 </body>
 
 </html>
