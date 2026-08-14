@@ -74,10 +74,14 @@ body {
 .section-title {
   color: var(--white-color);
   text-transform: uppercase;
+  font-weight: 600;
 }
 .section-para {
   color: var(--grey-color);
   font-size: 20px;
+}
+p{
+  color: var(--grey-color);
 }
 
 .hero {
@@ -210,5 +214,59 @@ a.active {
 
 nav ul li a.active::before {
   transform: scaleX(1);
+  color: var(--primary-color);
+}
+
+
+
+footer{
+  /* min-height: 400px; */
+  background: var(--darkgrey-color);
+}
+
+.logo-side{
+  width: 7px;
+  height: 45px;
+  margin-right: 10px;
+  background: var(--primary-color);
+  border-radius: 5px;
+}
+
+footer h4{
+  color: var(--primary-color);
+  text-transform: uppercase;
+}
+footer p{
+  color: var(--grey-color);
+  margin-bottom: 0;
+  font-size: 18px;
+}
+.fab{
+  color: var(--white-color);
+  /* padding: 10px; */
+  /* background: #000; */
+}
+footer .social-icon{
+  height: 100px;
+  width: 100px;
+  padding: 15px;
+  border-radius: 50%;
+  background:var(--black-color) ;
+  margin-top: 150px;
+  transition: .5s;
+}
+footer .social-icon:hover{
+  background: var(--primary-color);
+}
+
+.footer-bottom{
+  color: var(--grey-color);
+}
+.footer-bottom a{
+  color:var(--grey-color);
+  text-decoration: none;
+  transition: .5s;
+}
+.footer-bottom a:hover{
   color: var(--primary-color);
 }

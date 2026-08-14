@@ -18,6 +18,11 @@
     <!-- Bootstrap Link  -->
     <link rel="stylesheet" href="bootstrap/Bootstrap.css">
 
+
+    <link rel="stylesheet" href="owlCarousel/css/owl.carousel.css" />
+    <link rel="stylesheet" href="owlCarousel/css/owl.theme.green.css" />
+
+
     <style>
         .about-para {
             color: var(--grey-color);
@@ -27,16 +32,158 @@
             background: var(--darkgrey-color);
             color: var(--white-color);
             text-align: center;
-            display:flex;
-            align-items:center;
+            display: flex;
+            align-items: center;
         }
-        .card i{
+
+        .card i {
             font-size: 120px;
         }
 
         .about-customers .card p {
             color: var(--grey-color);
             text-transform: uppercase;
+        }
+
+        .what-offer p {
+            color: var(--lightgrey-color);
+        }
+
+        section.why-stand-out {
+            color: var(--grey-color);
+        }
+
+        .profile-card {
+            /* width: 350px; */
+            /* height: 500px; */
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile-card::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.7);
+            opacity: 0;
+            transition: .4s;
+        }
+
+        .profile-card::after {
+            content: '';
+            width: 120%;
+            height: 120%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid rgb(124, 124, 124);
+            /* transform: scale(1.2); */
+            border-radius: 10px;
+            transition: .4s;
+        }
+
+        .profile-card:hover::before {
+            opacity: 1;
+        }
+
+        .profile-card:hover::after {
+            width: calc(100% - 20px);
+            height: calc(100% - 20px);
+        }
+
+        .profile-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .icon {
+            height: 40px;
+            width: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid rgb(182, 182, 182);
+            border-radius: 50%;
+            position: absolute;
+            transition: .5s;
+            z-index: 11;
+        }
+
+        .icon:hover {
+            background: white;
+        }
+
+        .icon:hover .f-icon {
+            color: #000000;
+        }
+
+        .icon1 {
+            transition: 1s;
+            top: 125px;
+            right: -20%;
+        }
+
+        .icon2 {
+            transition: .75s;
+            top: 75px;
+            right: -20%;
+        }
+
+        .icon3 {
+            transition: .5s;
+            top: 25px;
+            right: -20%;
+        }
+
+        .profile-card:hover .icon {
+            right: 20px;
+        }
+
+        .f-icon {
+            color: rgb(180, 180, 180);
+            transition: .5s;
+        }
+
+        .trainer-name {
+            color: rgb(226, 226, 226);
+            position: absolute;
+            bottom: 45px;
+            left: -100%;
+            font-size: 25px;
+            font-weight: 600;
+            transition: .5s;
+        }
+
+        .trainer-profession {
+            color: rgb(170, 170, 170);
+            position: absolute;
+            bottom: 25px;
+            left: -100%;
+            font-size: 18px;
+            transition: .75s;
+        }
+
+        .profile-card:hover .trainer-name {
+            left: 30px;
+        }
+
+        .profile-card:hover .trainer-profession {
+            left: 30px;
+        }
+
+        .owl-theme .owl-dots .owl-dot span {
+            background: rgb(117, 117, 117);
+        }
+
+        .owl-carousel .owl-dots .owl-dot.active span,
+        .owl-carousel .owl-dots .owl-dot:hover span {
+            background-color: rgb(255, 94, 0);
         }
     </style>
 
@@ -132,35 +279,216 @@
         <div class="container">
             <h2 class="section-title"> what we offer </h2>
             <div class="row my-4">
-                <div class="col-md-3">
-                    <div class="card py-4">
+                <div class="mb-3 col-6 col-md-3">
+                    <div class="card py-4 h-100">
                         <img src="assests/svg/strength.png" alt="" height="70px" style="color:red;">
-                        <p class="m-0 fs-4 px-md-4 fw-semibold mt-3"> Strength Training</p>
+                        <p class="m-0 fs-5 px-md-4 fw-semibold mt-3"> Strength Training</p>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="card py-4">
+                <div class="mb-3 col-6 col-md-3">
+                    <div class="card py-4 h-100">
                         <img src="assests/svg/weight.png" alt="" height="70px" style="color:red;">
-                        <p class="m-0 fs-4 px-md-4 fw-semibold mt-3"> Weight Management </p>
+                        <p class="m-0 fs-5 px-md-4 fw-semibold mt-3"> Weight Management </p>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="card py-4">
+                <div class="mb-3 col-6 col-md-3">
+                    <div class="card py-4 h-100">
                         <img src="assests/svg/stretching.png" alt="" height="70px" style="color:red;">
-                        <p class="m-0 fs-4 px-md-4 fw-semibold mt-3"> Flexibility & Mobility</p>
+                        <p class="m-0 fs-5 px-md-4 fw-semibold mt-3"> Flexibility & Mobility</p>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="mb-3 col-6 col-md-3">
                     <div class="card py-4 h-100">
                         <img src="assests/svg/guide.png" alt="" height="70px" style="color:red;">
-                        <p class="m-0 fs-4 px-md-4 fw-semibold mt-3"> Fitness <br> Guidance </p>
+                        <p class="m-0 fs-5 px-md-4 fw-semibold mt-3"> Fitness <br> Guidance </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+
+    <section class="why-stand-out py-5">
+        <div class="container">
+            <p class="section-top-title"> why we stand out </p>
+            <h2 class="section-title">more than just a gym</h2>
+            <p class="fs-5">We create an environment where every workout has a purpose. From professional guidance to
+                modern equipment and a supportive community, everything is designed to keep you motivated and moving
+                forward.</p>
+            <div class="row fs-5">
+                <div class="col-md-6">
+                    <div>
+                        <i class="fas fa-check-circle" style="color:var(--primary-color);"></i> Expert & Supportive
+                        Trainers
+                    </div>
+                    <div>
+                        <i class="fas fa-check-circle" style="color:var(--primary-color);"></i> Modern Fitness Equipment
+                    </div>
+                    <div>
+                        <i class="fas fa-check-circle" style="color:var(--primary-color);"></i> Clean & Comfortable
+                        Environment
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <i class="fas fa-check-circle" style="color:var(--primary-color);"></i> Flexible Membership
+                        Plans
+                    </div>
+                    <div>
+                        <i class="fas fa-check-circle" style="color:var(--primary-color);"></i> Personalized Workout
+                        Guidance
+                    </div>
+                    <div>
+                        <i class="fas fa-check-circle" style="color:var(--primary-color);"></i> Motivating Fitness
+                        Community
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="trainers py-5">
+        <div class="container">
+            <h2 class="section-title mb-5"> meet our trainers </h2>
+            <div id="owl-demo" class="owl-carousel owl-theme owl-ltr">
+                <div class="profile-card item">
+                    <img src="assests/images/anes-hamzic-AFhg4Ve6vxg-unsplash.jpg" alt="">
+                    <span class="social-icons">
+                        <a href="#"> <span class="icon icon1"> <i class="f-icon fab fa-facebook-f"></i></span></a>
+                        <a href="#"> <span class="icon icon2"> <i class="f-icon fab fa-instagram"></i></span></a>
+                        <a href="#"> <span class="icon icon3"> <i class="f-icon fab fa-x-twitter"></i></span></a>
+                    </span>
+                    <span class="trainer-name fs-3"> Aditi Sharma </span>
+                    <div class="trainer-profession fs-5"> Yoga Expert Trainer</div>
+                </div>
+                <div class="profile-card item">
+                    <img src="assests/images/aaron-brogden-9y4MaTz2Js0-unsplash.jpg" alt="">
+                    <span class="social-icons">
+                        <a href="#"> <span class="icon icon1"> <i class="f-icon fab fa-facebook-f"></i></span></a>
+                        <a href="#"> <span class="icon icon2"> <i class="f-icon fab fa-instagram"></i></span></a>
+                        <a href="#"> <span class="icon icon3"> <i class="f-icon fab fa-x-twitter"></i></span></a>
+                    </span>
+                    <span class="trainer-name fs-3"> Aditi Sharma </span>
+                    <div class="trainer-profession fs-5"> Yoga Expert Trainer</div>
+                </div>
+                <div class="profile-card item">
+                    <img src="assests/images/mediamodifier-m6Hw3FybWPA-unsplash.jpg" alt="">
+                    <span class="social-icons">
+                        <a href="#"> <span class="icon icon1"> <i class="f-icon fab fa-facebook-f"></i></span></a>
+                        <a href="#"> <span class="icon icon2"> <i class="f-icon fab fa-instagram"></i></span></a>
+                        <a href="#"> <span class="icon icon3"> <i class="f-icon fab fa-x-twitter"></i></span></a>
+                    </span>
+                    <span class="trainer-name fs-3"> Aditi Sharma </span>
+                    <div class="trainer-profession fs-5"> Yoga Expert Trainer</div>
+                </div>
+                <div class="profile-card item">
+                    <img src="assests/images/nandkishore-sahu-IQEJcrK62Hw-unsplash.jpg" alt="">
+                    <span class="social-icons">
+                        <a href="#"> <span class="icon icon1"> <i class="f-icon fab fa-facebook-f"></i></span></a>
+                        <a href="#"> <span class="icon icon2"> <i class="f-icon fab fa-instagram"></i></span></a>
+                        <a href="#"> <span class="icon icon3"> <i class="f-icon fab fa-x-twitter"></i></span></a>
+                    </span>
+                    <span class="trainer-name fs-3"> Aditi Sharma </span>
+                    <div class="trainer-profession fs-5"> Yoga Expert Trainer</div>
+                </div>
+                <div class="profile-card item">
+                    <img src="assests/images/julia-rekamie-Z72YujnOrlY-unsplash.jpg" alt="">
+                    <span class="social-icons">
+                        <a href="#"> <span class="icon icon1"> <i class="f-icon fab fa-facebook-f"></i></span></a>
+                        <a href="#"> <span class="icon icon2"> <i class="f-icon fab fa-instagram"></i></span></a>
+                        <a href="#"> <span class="icon icon3"> <i class="f-icon fab fa-x-twitter"></i></span></a>
+                    </span>
+                    <span class="trainer-name fs-3"> Aditi Sharma </span>
+                    <div class="trainer-profession fs-5"> Yoga Expert Trainer</div>
+                </div>
+                <div class="profile-card item">
+                    <img src="assests/images/dollar-gill-f9W9svqHpSU-unsplash.jpg" alt="">
+                    <span class="social-icons">
+                        <a href="#"> <span class="icon icon1"> <i class="f-icon fab fa-facebook-f"></i></span></a>
+                        <a href="#"> <span class="icon icon2"> <i class="f-icon fab fa-instagram"></i></span></a>
+                        <a href="#"> <span class="icon icon3"> <i class="f-icon fab fa-x-twitter"></i></span></a>
+                    </span>
+                    <span class="trainer-name fs-3"> Aditi Sharma </span>
+                    <div class="trainer-profession fs-5"> Yoga Expert Trainer</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="p-4">
+        <div class="row mb-5">
+            <div class="col-12 col-lg-5 logo-details pe-5">
+                <div class="d-flex">
+                    <span class="logo-side"></span>
+                    <div class="logo fs-2 fw-semibold">Core<span>X</span></div>
+                </div>
+                <p>
+                    A high-energy, elite strength and conditioning facility designed to push your athletic boundaries.
+                    No fluff. Just iron and result
+                </p>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 py-2 mt-4">
+                <h4 class="fw-semibold"> opening hours </h4>
+                <p> Mon - Sat : 06:00 AM to 10:00 PM</p>
+                <p> Sun : 07:00 AM to 08:00 PM</p>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 py-2 mt-4">
+                <h4 class="fw-semibold mb-4"> follow the corex </h4>
+                <a href="#" class="social-icon"> <i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"> <i class="fab fa-youtube"></i></a>
+                <a href="#" class="social-icon"> <i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"> <i class="fab fa-x-twitter"></i></a>
+            </div>
+        </div>
+
+        <div class="row footer-bottom">
+            <div class="col-12 col-md-8 text-uppercase">
+                &copy; 2026 corex fitness. all right reserved
+            </div>
+            <div class="col-6 mt-3 col-md-2">
+                <a href="#"> Privacy Policy </a>
+            </div>
+            <div class="col-6 mt-3 col-md-2">
+                <a href="#"> Terms of Service </a>
+            </div>
+        </div>
+    </footer>
+
     <script src="js/script.js"></script>
+
+    <script src="owlCarousel/js/jquery.min.js"></script>
+    <script src="owlCarousel/js/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                center: true,
+                items: 3,
+                loop: true,
+                margin: 20,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
+                smartSpeed: 1000,
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: true
+                    },
+                    600: {
+                        items: 2,
+                        nav: false
+                    },
+                    1000: {
+                        items: 3,
+                        nav: true,
+                        // loop: false
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
