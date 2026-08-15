@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="bootstrap/Bootstrap.css">
 
     <style>
-        .gallery-item {
+        .gallery-img {
             border: 1px solid rgb(107, 107, 107);
             border-radius: 15px;
             overflow: hidden;
@@ -28,19 +28,19 @@
             transition: .5s;
         }
 
-        .gallery-item img {
+        .gallery-img img {
             transition: .5s;
         }
 
-        .gallery-item:hover {
+        .gallery-img:hover {
             border-color: rgb(255, 102, 0);
         }
 
-        .gallery-item:hover img {
+        .gallery-img:hover img {
             transform: scale(1.05);
         }
 
-        .gallery-item p {
+        .gallery-img p {
             position: absolute;
             bottom: 2%;
             right: 2%;
@@ -70,6 +70,7 @@
             min-width: 0;
             min-height: 0;
             overflow: hidden;
+            margin: 5px;
         }
 
         .gallery-item img {
@@ -84,18 +85,22 @@
             grid-column: 1 / 5;
             grid-row: 1/4;
         }
+
         .training {
             grid-column: 5/7;
             grid-row: 1/3;
         }
+
         .ropes {
             grid-column: 1/3;
             grid-row: 4/7;
         }
+
         .weights {
             grid-column: 3/5;
             grid-row: 4/7;
         }
+
         .cardio {
             grid-column: 5/7;
             grid-row: 3/7;
@@ -106,28 +111,33 @@
             .gym-gallery {
                 width: 100%;
                 grid-template-columns: 1fr 1fr;
-                grid-template-rows:430px 260px 330px;
+                grid-template-rows: 430px 260px 330px;
                 gap: 4px;
             }
+
             /* Large image */
             .hero {
                 grid-column: 1 / 3;
                 grid-row: 1;
             }
+
             /* Row 2 */
             .training {
                 grid-column: 1;
                 grid-row: 2;
             }
+
             .ropes {
                 grid-column: 2;
                 grid-row: 2;
             }
+
             /* Row 3 */
             .weights {
                 grid-column: 1;
                 grid-row: 3;
             }
+
             .cardio {
                 grid-column: 2;
                 grid-row: 3;
@@ -146,23 +156,30 @@
                 grid-template-rows: auto;
                 gap: 3px;
             }
+
             .gallery-item {
                 grid-column: auto;
                 grid-row: auto;
             }
+
             /* Main image */
             .hero {
                 height: 330px;
             }
 
         }
+
         /* ================ SMALL MOBILE =================== */
 
         @media (max-width: 380px) {
             .hero {
                 height: 280px;
             }
-            .training,.ropes,.weights,.cardio {
+
+            .training,
+            .ropes,
+            .weights,
+            .cardio {
                 height: 220px;
             }
         }
@@ -187,12 +204,13 @@
 
     <!-- Hero content and image -->
     <header class="position-relative">
-        <div class="hero">
-            <div class="hero-content">
+        <div class="sub-hero">
+            <div class="sub-hero-content">
                 <div>
-                    <h2 class="hero-title fs-1 fw-semibold">Experience the <span>Energy.
+                    <h2 class="sub-hero-title fs-1 fw-semibold">Experience the <span>Energy.
                         </span></h2>
-                    <p class="hero-para fs-5 mx-md-5 px-md-5">Explore our gym, training sessions, modern equipment, and
+                    <p class="sub-hero-para fs-5 mx-md-5 px-md-5">Explore our gym, training sessions, modern equipment,
+                        and
                         fitness community. Every image represents the energy, dadication, and passion that drive us
                         forward. </p>
                 </div>
@@ -204,10 +222,10 @@
             <div class="logo fs-2 fw-semibold">Core<span>X</span></div>
             <ul class="d-flex justify-content-between align-items-center m-0">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Gallery</a></li>
-                <a href="#" class="button button-primary">Register Now</a>
+                <li><a href="about.html">About</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <a href="contact.html" class="button button-primary">Register Now</a>
             </ul>
         </nav>
     </header>
@@ -219,47 +237,128 @@
             <h2 class="section-title">built for strength. designed for result</h2>
             <div class="gym-gallery">
                 <!-- Large Hero Image -->
-                <div class="gallery-item hero">
-                    <img src="assests/images/19298fa7-d68e-47e8-81cc-3972d40e8f1a.jpg" alt="CoreX gym reception">
+                <div class="gallery-img gallery-item hero">
+                    <img src="assests/images/reception.jpg" alt="CoreX gym reception">
                     <p> Reception Area </p>
                 </div>
 
                 <!-- Top Right -->
-                <div class="gallery-item training">
-                    <img src="assests/images/slider1.jpg" alt="Gym strength training">
+                <div class="gallery-img gallery-item training">
+                    <img src="assests/images/slider2.jpg" alt="Gym strength training">
+                    <p> Weight Training Area </p>
                 </div>
 
                 <!-- Bottom Left -->
-                <div class="gallery-item ropes">
-                    <img src="assests/images/slider2.jpg" alt="Battle rope workout">
+                <div class="gallery-img gallery-item ropes">
+                    <img src="assests/images/cardio-area.jpg" alt="Battle rope workout">
+                    <p> Cardio Area </p>
                 </div>
 
                 <!-- Bottom Center -->
-                <div class="gallery-item weights">
-                    <img src="assests/images/slider3.jpg" alt="Gym weights area">
+                <div class="gallery-img gallery-item weights">
+                    <img src="assests/images/weight-lift.jpg" alt="Gym weights area">
+                    <p> Weight Lifting Area </p>
                 </div>
 
                 <!-- Right Column Bottom -->
-                <div class="gallery-item cardio">
-                    <img src="assests/images/f6113690-909a-4cd3-afef-d480ceeab6fb.jpg" alt="Gym cardio area">
+                <div class="gallery-img gallery-item cardio">
+                    <img src="assests/images/personal-train.jpg" alt="Gym cardio area">
+                    <p> Personal Training Area </p>
                 </div>
             </div>
-            <!-- <div class="row">
-                <div class=".col-sm-6 col-md-4 my-4">
-                    <div class="gallery-img">
-                        <img src="assests/images/19298fa7-d68e-47e8-81cc-3972d40e8f1a.jpg" alt="" class="w-100">
-                        <p> Reception Area </p>
-                    </div>
-                </div>
-                <div class=".col-sm-6 col-md-4 my-4">
-                    <div class="gallery-img">
-                        <img src="assests/images/19298fa7-d68e-47e8-81cc-3972d40e8f1a.jpg" alt="" class="w-100">
-                        <p> Reception Area </p>
-                    </div>
-                </div>
-            </div> -->
         </div>
     </section>
+
+
+    <section class="training-gallery">
+        <div class="container">
+            <p class="section-top-title">Traning gallery</p>
+            <h2 class="section-title"> train with purpose </h2>
+            <p class="section-para">From intense strength sessions to focused personal training, our workouts are
+                designed to challenge you and help you make progress.</p>
+            <div class="row ">
+                <div class="g-3 col-sm-6 col-md-6">
+                    <div class="gallery-img">
+                        <img src="assests/images/slider1.jpg" alt="" width="100%">
+                    </div>
+                </div>
+                <div class="g-3 col-sm-6 col-md-6">
+                    <div class="gallery-img">
+                        <img src="assests/images/training2.jpg" alt="" width="100%">
+                    </div>
+                </div>
+                <div class="g-3 col-sm-6 col-md-5">
+                    <div class="gallery-img">
+                        <img src="assests/images/training3.jpg" alt="" width="100%">
+                    </div>
+                </div>
+                <div class="g-3 col-sm-6 col-md-7">
+                    <div class="gallery-img">
+                        <img src="assests/images/training6.jpg" alt="" width="100%">
+                    </div>
+                </div>
+                <div class="g-3 col-sm-6 col-md-6">
+                    <div class="gallery-img">
+                        <img src="assests/images/training4.jpg" alt="" width="100%">
+                    </div>
+                </div>
+                <div class="g-3 col-sm-6 col-md-6">
+                    <div class="gallery-img">
+                        <img src="assests/images/training5.jpg  " alt="" width="100%">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="join-today px-lg-5 px-md-4 px-sm-3 px-2">
+        <div class="content text-center px-lg-5 px-md-4 px-sm-3 px-2">
+            <h1 class="text-uppercase fw-semibold"> Ready to start your fitness journey?</h1>
+            <p class="fs-5">Become part of our growing fitness family and experience guidance, modern facilities, and
+                personalized workout programs designed to help you achieve your goals.</p>
+            <a href="#" class="button button-secondary mt-3"> Join Today </a>
+        </div>
+    </section>
+
+    <footer class="p-4">
+        <div class="row mb-5">
+            <div class="col-12 col-lg-5 logo-details pe-5">
+                <div class="d-flex">
+                    <span class="logo-side"></span>
+                    <div class="logo fs-2 fw-semibold">Core<span>X</span></div>
+                </div>
+                <p>
+                    A high-energy, elite strength and conditioning facility designed to push your athletic boundaries.
+                    No fluff. Just iron and result
+                </p>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 py-2 mt-4">
+                <h4 class="fw-semibold"> opening hours </h4>
+                <p> Mon - Sat : 06:00 AM to 10:00 PM</p>
+                <p> Sun : 07:00 AM to 08:00 PM</p>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 py-2 mt-4">
+                <h4 class="fw-semibold mb-4"> follow the corex </h4>
+                <a href="#" class="social-icon"> <i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"> <i class="fab fa-youtube"></i></a>
+                <a href="#" class="social-icon"> <i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"> <i class="fab fa-x-twitter"></i></a>
+            </div>
+        </div>
+
+        <div class="row footer-bottom">
+            <div class="col-12 col-md-8 text-uppercase">
+                &copy; 2026 corex fitness. all right reserved
+            </div>
+            <div class="col-6 mt-3 col-md-2">
+                <a href="#"> Privacy Policy </a>
+            </div>
+            <div class="col-6 mt-3 col-md-2">
+                <a href="#"> Terms of Service </a>
+            </div>
+        </div>
+    </footer>
 
 
     <script src="js/script.js"></script>

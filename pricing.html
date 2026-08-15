@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CoreX - Pricing </title>
+
+    <!-- All in one css  -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Homepage css  -->
+    <link rel="stylesheet" href="css/contact.css">
+
+    <!-- fontawesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" />
+
+    <!-- Bootstrap Link  -->
+    <link rel="stylesheet" href="bootstrap/Bootstrap.css">
+
+    <style>
+        .sub-hero {
+            background: url("assests/images/danielle-cerullo-CQfNt66ttZM-unsplash.jpg");
+            background-position: center center;
+            background-size: cover;
+        }
+
+        .pricing-card {
+            /* height: 400px; */
+            /* width: 350px; */
+            border-radius: 10px;
+            padding: 20px;
+            background: var(--darkgrey-color);
+            /* display:flex;
+            flex-direction: column;
+            align-items:center; */
+        }
+
+        .pcard-heading {
+            font-size: 30px;
+            color: var(--white-color);
+            text-transform: uppercase
+        }
+
+        .pricing-card ul {
+            color: var(--lightgrey-color);
+        }
+
+        .pricing-card ul li {
+            margin-top: 10px;
+        }
+
+        .pricing-card .price {
+            font-size: 30px;
+            color: var(--white-color);
+        }
+
+        .price-month {
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+        .table,
+        td,
+        th {
+            background-color: var(--black-color) !important;
+            color: var(--lightgrey-color) !important;
+            border-color: rgb(65, 65, 65);
+            padding: 10px 0 !important;
+        }
+
+        tr th:nth-child(1) {
+            font-weight: 500;
+            width: 30%;
+        }
+
+        tr th:not(:nth-child(1)) {
+            text-align: center;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        .faq-section {
+            width: 100%;
+            padding: 20px 18px;
+        }
+
+        .faq-item {
+            margin-bottom: 13px;
+            border: none !important;
+            border-radius: 0 !important;
+            background: transparent;
+        }
+
+        /* Question */
+        .faq-question {
+            width: 100%;
+            height: 52px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 18px;
+
+            background: #222222;
+            color: #aaaaaa;
+
+            border: none;
+            border-radius: 0;
+
+            font-size: 18px;
+            font-weight: 400;
+            text-align: left;
+            transition: background-color 0.35s ease, color 0.35s ease;
+            box-shadow: none !important;
+        }
+
+        .faq-question:hover {
+            background: #222222;
+            color: #aaaaaa;
+        }
+
+            /* Active accordion */
+            .faq-question:not(.collapsed) {
+            background: rgb(88, 88, 88);
+            color: #ffffff;
+        }
+
+        .faq-question:focus {
+            box-shadow: none !important;
+        }
+
+        /* Remove Bootstrap's default arrow */
+        .faq-question::after {
+            display: none;
+        }
+
+        /* Plus / Minus */
+        .faq-icon {
+            position: relative;
+
+            width: 16px;
+            height: 16px;
+
+            flex-shrink: 0;
+        }
+
+        .faq-icon::before,
+        .faq-icon::after {
+            content: "";
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            width: 11px;
+            height: 1px;
+
+            background: #aaaaaa;
+
+            transform: translate(-50%, -50%);
+        }
+
+        .faq-icon::after {
+            transform: translate(-50%, -50%) rotate(90deg);
+        }
+
+        /* When opened, turn + into − */
+        .faq-question:not(.collapsed) .faq-icon::after {
+            display: none;
+        }
+
+        /* Answer */
+        .faq-answer {
+            background: #000000;
+            color: #b5b5b5;
+
+            font-size: 16px;
+            line-height: 1.5;
+
+            padding: 10px 18px 11px;
+        }
+
+        .faq-answer-inner {
+            padding: 0;
+        }
+
+        /* Remove Bootstrap transitions if you want the exact simple look */
+        .accordion-collapse {
+            transition: none;
+        }
+
+        .accordion-collapse {
+    transition: height 0.4s ease;
+}
+
+
+        /* Tablet */
+        @media (max-width: 768px) {
+
+            .faq-section {
+                padding: 15px;
+            }
+
+            .faq-question {
+                font-size: 16px;
+                height: 50px;
+                padding: 0 16px;
+            }
+
+            .faq-answer {
+                font-size: 15px;
+                padding: 10px 16px;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 480px) {
+
+            .faq-section {
+                padding: 10px;
+            }
+
+            .faq-item {
+                margin-bottom: 10px;
+            }
+
+            .faq-question {
+                height: 48px;
+                padding: 0 14px;
+                font-size: 15px;
+            }
+
+            .faq-answer {
+                font-size: 14px;
+                padding: 9px 14px;
+            }
+        }
+
+
+    </style>
+</head>
+
+<body onscroll="scrollFunction()">
+
+    <!-- Got to top button  -->
+    <a href="#top" id="gototop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Navbar Top Details -->
+    <div id="top" class="top-details d-flex justify-content-around align-items-center">
+        <span> <i class="fas fa-location-dot"></i> Near Ganga Nagar, Mawana Road Meerut </span>
+        <span class="divider"></span>
+        <span> <i class="fas fa-phone"></i> +91-9874561230, +918974561230 </span>
+        <span class="divider"></span>
+        <span> <i class="fas fa-envelope"></i> corex.support@gmail.com </span>
+    </div>
+
+    <!-- Hero content and image -->
+    <header class="position-relative">
+        <div class="sub-hero">
+            <div class="sub-hero-content">
+                <div>
+                    <h2 class="sub-hero-title fs-1 fw-semibold">Choose Your <span>Better Plan</span></h2>
+                    <p class="sub-hero-para fs-5 mx-md-5 px-md-5">Whether you're just started or ready to take your
+                        training to the next level, choose a membership that work for you. </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navbar Starts -->
+        <nav class="position-absolute top-0 w-100 d-flex justify-content-between align-items-center px-5">
+            <div class="logo fs-2 fw-semibold">Core<span>X</span></div>
+            <ul class="d-flex justify-content-between align-items-center m-0">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="pricing.html" class="active">Pricing</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <a href="contact.html" class="button button-primary">Register Now</a>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="pricing py-5">
+        <div class="container">
+            <p class="section-top-title">membership plan </p>
+            <h2 class="section-title">flexible plans to fit your goals</h2>
+            <p class="section-para">Whether you're just started or ready to take your training to the next level, choose
+                a membership that work for you. </p>
+            <div class="pricing-container row d-flex align-items-center">
+                <div class="col-md-4 g-4">
+                    <div class="pricing-card">
+                        <h3 class="pcard-heading text-center"> Basic plan </h3>
+                        <p class="pcard-para text-center mb-5">Perfect for beginners starting their fitness journey.</p>
+                        <ul>
+                            <li> <i class="fas fa-check"></i> Gym Access </li>
+                            <li> <i class="fas fa-check"></i> Cardio Equpment</li>
+                            <li> <i class="fas fa-check"></i> Strength Training Area</li>
+                            <li> <i class="fas fa-check"></i> Locker Facility</li>
+                            <li> <i class="fas fa-check"></i> Basic Workout Guidance</li>
+                        </ul>
+                        <div class="price mt-5 text-center">&#8377; 999
+                            <span class="price-month">/month</span>
+                        </div>
+                        <div class="text-center mt-4 ">
+                            <div class="button button-secondary"> Join Now </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 g-4">
+                    <div class="pricing-card">
+                        <h3 class="pcard-heading text-center"> elite plan </h3>
+                        <p class="pcard-para text-center mb-5">A complete fitness experience with personalized
+                            attention.</p>
+                        <ul>
+                            <li> <i class="fas fa-check"></i> Unlimited Gym Access </li>
+                            <li> <i class="fas fa-check"></i> Personal Trainert</li>
+                            <li> <i class="fas fa-check"></i> Customized Workout Plan</li>
+                            <li> <i class="fas fa-check"></i> Nutrition Guidance
+                            <li>
+                            <li> <i class="fas fa-check"></i> Progress Tracking</li>
+                            <li> <i class="fas fa-check"></i> Priority Support</li>
+                            <li> <i class="fas fa-check"></i> All Gym Facilities</li>
+                        </ul>
+                        <div class="price mt-5 text-center">&#8377; 3,499
+                            <span class="price-month">/month</span>
+                        </div>
+                        <div class="text-center mt-4 ">
+                            <div class="button button-secondary"> Go Elite </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 g-4">
+                    <div class="pricing-card">
+                        <h3 class="pcard-heading text-center"> Pro plan </h3>
+                        <p class="pcard-para text-center mb-5">Perfect for beginners starting their fitness journey.</p>
+                        <ul>
+                            <li> <i class="fas fa-check"></i> Unlimited Gym Access </li>
+                            <li> <i class="fas fa-check"></i> All Fitness Equpment</li>
+                            <li> <i class="fas fa-check"></i> Personalized Workout Plan</li>
+                            <li> <i class="fas fa-check"></i> Trainer Guidance</li>
+                            <li> <i class="fas fa-check"></i> Locker Facility</li>
+                            <li> <i class="fas fa-check"></i> Cardio and Strength Program</li>
+                        </ul>
+                        <div class="price mt-5 text-center">&#8377; 1,999
+                            <span class="price-month">/month</span>
+                        </div>
+                        <div class="text-center mt-4 ">
+                            <div class="button button-secondary"> Get Started </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="compare-plan py-5">
+        <div class="container">
+            <p class="section-top-title">compare plans </p>
+            <h2 class="section-title mb-4"> find the plan that fits you </h2>
+
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Features</th>
+                        <th scope="col">Basic</th>
+                        <th scope="col">Pro</th>
+                        <th scope="col">Elite</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Gym Access</th>
+                        <td>&check;</td>
+                        <td>&check;</td>
+                        <td>&check;</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Cardio Area</th>
+                        <td>&check;</td>
+                        <td>&check;</td>
+                        <td>&check;</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Strngth Trainig</th>
+                        <td>&check;</td>
+                        <td>&check;</td>
+                        <td>&check;</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Workout Plan</th>
+                        <td>&minus;</td>
+                        <td>&check;</td>
+                        <td>&check;</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Trainer Guidance</th>
+                        <td>&minus;</td>
+                        <td>&check;</td>
+                        <td>&check;</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Personal Trainer</th>
+                        <td>&minus;</td>
+                        <td>&minus;</td>
+                        <td>&check;</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Nutrition Guidance</th>
+                        <td>&minus;</td>
+                        <td>&minus;</td>
+                        <td>&check;</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Progress Tracking</th>
+                        <td>&minus;</td>
+                        <td>&check;</td>
+                        <td>&check;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+
+    <section class="faq py-5">
+        <div class="container">
+            <h2 class="section-title mb-4"> frequently asked questions </h2>
+            <section class="faq-section">
+
+                <div class="accordion" id="faqAccordion">
+
+                    <!-- FAQ 1 -->
+                    <div class="accordion-item faq-item">
+
+                        <h2 class="accordion-header">
+
+                            <button class="accordion-button faq-question" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faqOne" aria-expanded="true" aria-controls="faqOne">
+                                <span>Can I cancel my membership?</span>
+
+                                <span class="faq-icon"></span>
+                            </button>
+
+                        </h2>
+
+                        <div id="faqOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    Yes, membership cancellation depends on the terms of your selected plan.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- FAQ 2 -->
+                    <div class="accordion-item faq-item">
+
+                        <h2 class="accordion-header">
+
+                            <button class="accordion-button faq-question collapsed" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false"
+                                aria-controls="faqTwo">
+                                <span>Can beginners join the gym?</span>
+
+                                <span class="faq-icon"></span>
+                            </button>
+
+                        </h2>
+
+                        <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    Yes, beginners are welcome and our trainers can guide you.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- FAQ 3 -->
+                    <div class="accordion-item faq-item">
+
+                        <h2 class="accordion-header">
+
+                            <button class="accordion-button faq-question collapsed" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false"
+                                aria-controls="faqThree">
+                                <span>Do you offer personal training?</span>
+
+                                <span class="faq-icon"></span>
+                            </button>
+
+                        </h2>
+
+                        <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    Yes, personal training sessions are available with our professional trainers.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- FAQ 4 -->
+                    <div class="accordion-item faq-item">
+
+                        <h2 class="accordion-header">
+
+                            <button class="accordion-button faq-question collapsed" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#faqFour" aria-expanded="false"
+                                aria-controls="faqFour">
+                                <span>Can I change my membership plan?</span>
+
+                                <span class="faq-icon"></span>
+                            </button>
+
+                        </h2>
+
+                        <div id="faqFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    Yes, you can change your membership plan according to the available options.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- FAQ 5 -->
+                    <div class="accordion-item faq-item">
+
+                        <h2 class="accordion-header">
+
+                            <button class="accordion-button faq-question collapsed" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#faqFive" aria-expanded="false"
+                                aria-controls="faqFive">
+                                <span>Do you offer trial sessions?</span>
+
+                                <span class="faq-icon"></span>
+                            </button>
+
+                        </h2>
+
+                        <div id="faqFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    Yes, trial sessions are available for new members.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+    </section>
+
+
+
+    <section class="join-today px-lg-5 px-md-4 px-sm-3 px-2">
+        <div class="content text-center px-lg-5 px-md-4 px-sm-3 px-2">
+            <h1 class="text-uppercase fw-semibold"> Ready to start your fitness journey?</h1>
+            <p class="fs-5">Become part of our growing fitness family and experience guidance, modern facilities, and
+                personalized workout programs designed to help you achieve your goals.</p>
+            <a href="#" class="button button-secondary mt-3"> Join Today </a>
+        </div>
+    </section>
+
+    <footer class="p-4">
+        <div class="row mb-5">
+            <div class="col-12 col-lg-5 logo-details pe-5">
+                <div class="d-flex">
+                    <span class="logo-side"></span>
+                    <div class="logo fs-2 fw-semibold">Core<span>X</span></div>
+                </div>
+                <p>
+                    A high-energy, elite strength and conditioning facility designed to push your athletic boundaries.
+                    No fluff. Just iron and result
+                </p>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 py-2 mt-4">
+                <h4 class="fw-semibold"> opening hours </h4>
+                <p> Mon - Sat : 06:00 AM to 10:00 PM</p>
+                <p> Sun : 07:00 AM to 08:00 PM</p>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 py-2 mt-4">
+                <h4 class="fw-semibold mb-4"> follow the corex </h4>
+                <a href="#" class="social-icon"> <i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"> <i class="fab fa-youtube"></i></a>
+                <a href="#" class="social-icon"> <i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"> <i class="fab fa-x-twitter"></i></a>
+            </div>
+        </div>
+
+        <div class="row footer-bottom">
+            <div class="col-12 col-md-8 text-uppercase">
+                &copy; 2026 corex fitness. all right reserved
+            </div>
+            <div class="col-6 mt-3 col-md-2">
+                <a href="#"> Privacy Policy </a>
+            </div>
+            <div class="col-6 mt-3 col-md-2">
+                <a href="#"> Terms of Service </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="bootstrap/Bootstrap_js_bundle.js"></script>
+</body>
+
+</html>

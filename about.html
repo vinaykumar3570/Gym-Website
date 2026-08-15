@@ -34,6 +34,7 @@
             text-align: center;
             display: flex;
             align-items: center;
+            transition: .5s;
         }
 
         .card i {
@@ -47,6 +48,12 @@
 
         .what-offer p {
             color: var(--lightgrey-color);
+        }
+
+        .what-offer .card:hover {
+            border: 1px solid var(--primary-color);
+            background: #1f1f1f;
+
         }
 
         section.why-stand-out {
@@ -207,12 +214,14 @@
 
     <!-- Hero content and image -->
     <header class="position-relative">
-        <div class="hero">
-            <div class="hero-content">
+        <div class="sub-hero">
+            <div class="sub-hero-content">
                 <div>
-                    <h2 class="hero-title fs-1 fw-semibold"><span> Stronger</span> Every Day. Better <span>Every Day.
+                    <h2 class="sub-hero-title fs-1 fw-semibold"><span> Stronger</span> Every Day. Better <span>Every
+                            Day.
                         </span></h2>
-                    <p class="hero-para fs-5 mx-md-5 px-md-5"> We more than just a gym - we're community dedicated to
+                    <p class="sub-hero-para fs-5 mx-md-5 px-md-5"> We more than just a gym - we're community dedicated
+                        to
                         helping you become <br>
                         stronger, healthier, and more confident. </p>
                 </div>
@@ -225,9 +234,9 @@
             <ul class="d-flex justify-content-between align-items-center m-0">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html" class="active">About</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Gallery</a></li>
-                <a href="#" class="button button-primary">Register Now</a>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <a href="contact.html" class="button button-primary">Register Now</a>
             </ul>
         </nav>
     </header>
@@ -353,69 +362,78 @@
             <h2 class="section-title mb-5"> meet our trainers </h2>
             <div id="owl-demo" class="owl-carousel owl-theme owl-ltr">
                 <div class="profile-card item">
-                    <img src="assests/images/anes-hamzic-AFhg4Ve6vxg-unsplash.jpg" alt="">
+                    <img src="assests/images/trainer1.jpg" alt="">
                     <span class="social-icons">
                         <a href="#"> <span class="icon icon1"> <i class="f-icon fab fa-facebook-f"></i></span></a>
                         <a href="#"> <span class="icon icon2"> <i class="f-icon fab fa-instagram"></i></span></a>
                         <a href="#"> <span class="icon icon3"> <i class="f-icon fab fa-x-twitter"></i></span></a>
                     </span>
                     <span class="trainer-name fs-3"> Aditi Sharma </span>
-                    <div class="trainer-profession fs-5"> Yoga Expert Trainer</div>
+                    <div class="trainer-profession fs-5"> Fitness Trainer</div>
                 </div>
                 <div class="profile-card item">
-                    <img src="assests/images/aaron-brogden-9y4MaTz2Js0-unsplash.jpg" alt="">
+                    <img src="assests/images/trainer2.jpg" alt="">
                     <span class="social-icons">
                         <a href="#"> <span class="icon icon1"> <i class="f-icon fab fa-facebook-f"></i></span></a>
                         <a href="#"> <span class="icon icon2"> <i class="f-icon fab fa-instagram"></i></span></a>
                         <a href="#"> <span class="icon icon3"> <i class="f-icon fab fa-x-twitter"></i></span></a>
                     </span>
-                    <span class="trainer-name fs-3"> Aditi Sharma </span>
-                    <div class="trainer-profession fs-5"> Yoga Expert Trainer</div>
+                    <span class="trainer-name fs-3"> Arjun Mehta </span>
+                    <div class="trainer-profession fs-5"> Strength Coach</div>
                 </div>
                 <div class="profile-card item">
-                    <img src="assests/images/mediamodifier-m6Hw3FybWPA-unsplash.jpg" alt="">
+                    <img src="assests/images/trainer3.jpg" alt="">
                     <span class="social-icons">
                         <a href="#"> <span class="icon icon1"> <i class="f-icon fab fa-facebook-f"></i></span></a>
                         <a href="#"> <span class="icon icon2"> <i class="f-icon fab fa-instagram"></i></span></a>
                         <a href="#"> <span class="icon icon3"> <i class="f-icon fab fa-x-twitter"></i></span></a>
                     </span>
-                    <span class="trainer-name fs-3"> Aditi Sharma </span>
-                    <div class="trainer-profession fs-5"> Yoga Expert Trainer</div>
+                    <span class="trainer-name fs-3"> Vikram Singh </span>
+                    <div class="trainer-profession fs-5"> Fitness Coach</div>
                 </div>
                 <div class="profile-card item">
-                    <img src="assests/images/nandkishore-sahu-IQEJcrK62Hw-unsplash.jpg" alt="">
+                    <img src="assests/images/trainer4.jpg" alt="">
                     <span class="social-icons">
                         <a href="#"> <span class="icon icon1"> <i class="f-icon fab fa-facebook-f"></i></span></a>
                         <a href="#"> <span class="icon icon2"> <i class="f-icon fab fa-instagram"></i></span></a>
                         <a href="#"> <span class="icon icon3"> <i class="f-icon fab fa-x-twitter"></i></span></a>
                     </span>
-                    <span class="trainer-name fs-3"> Aditi Sharma </span>
-                    <div class="trainer-profession fs-5"> Yoga Expert Trainer</div>
+                    <span class="trainer-name fs-3"> Rohan Sharma </span>
+                    <div class="trainer-profession fs-5"> Personal Trainer</div>
                 </div>
                 <div class="profile-card item">
-                    <img src="assests/images/julia-rekamie-Z72YujnOrlY-unsplash.jpg" alt="">
+                    <img src="assests/images/trainer5.jpg" alt="">
                     <span class="social-icons">
                         <a href="#"> <span class="icon icon1"> <i class="f-icon fab fa-facebook-f"></i></span></a>
                         <a href="#"> <span class="icon icon2"> <i class="f-icon fab fa-instagram"></i></span></a>
                         <a href="#"> <span class="icon icon3"> <i class="f-icon fab fa-x-twitter"></i></span></a>
                     </span>
-                    <span class="trainer-name fs-3"> Aditi Sharma </span>
-                    <div class="trainer-profession fs-5"> Yoga Expert Trainer</div>
+                    <span class="trainer-name fs-3"> Ananya Rao </span>
+                    <div class="trainer-profession fs-5"> Yoga Trainer</div>
                 </div>
                 <div class="profile-card item">
-                    <img src="assests/images/dollar-gill-f9W9svqHpSU-unsplash.jpg" alt="">
+                    <img src="assests/images/trainer6.jpg" alt="">
                     <span class="social-icons">
                         <a href="#"> <span class="icon icon1"> <i class="f-icon fab fa-facebook-f"></i></span></a>
                         <a href="#"> <span class="icon icon2"> <i class="f-icon fab fa-instagram"></i></span></a>
                         <a href="#"> <span class="icon icon3"> <i class="f-icon fab fa-x-twitter"></i></span></a>
                     </span>
-                    <span class="trainer-name fs-3"> Aditi Sharma </span>
-                    <div class="trainer-profession fs-5"> Yoga Expert Trainer</div>
+                    <span class="trainer-name fs-3"> Aditya Verma </span>
+                    <div class="trainer-profession fs-5"> Fitness Trainer</div>
                 </div>
             </div>
         </div>
     </section>
 
+
+    <section class="join-today px-lg-5 px-md-4 px-sm-3 px-2">
+        <div class="content text-center px-lg-5 px-md-4 px-sm-3 px-2">
+            <h1 class="text-uppercase fw-semibold"> Ready to start your fitness journey?</h1>
+            <p class="fs-5">Become part of our growing fitness family and experience guidance, modern facilities, and
+                personalized workout programs designed to help you achieve your goals.</p>
+            <a href="#" class="button button-secondary mt-3"> Join Today </a>
+        </div>
+    </section>
 
     <footer class="p-4">
         <div class="row mb-5">
@@ -466,6 +484,7 @@
                 center: true,
                 items: 3,
                 loop: true,
+                // nav: true,
                 margin: 20,
                 autoplay: true,
                 autoplayTimeout: 3000,
