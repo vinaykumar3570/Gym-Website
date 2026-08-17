@@ -179,3 +179,22 @@ logoSlide.innerHTML = dynamicBrand;
 
 let copy = logoSlide.cloneNode(true)
 document.querySelector(".quotes").appendChild(copy);
+
+
+
+// Responsive Navbar Code
+function showNav(e){
+    // console.log(e.className);
+    if(e.classList.contains("fa-bars"))
+    {
+        e.classList.remove("fa-bars");
+        e.classList.add("fa-xmark");
+        document.getElementById("nav-links").style.left = 0;
+    }
+    else{
+
+        e.classList.add("fa-bars");
+        e.classList.remove("fa-xmark");
+        document.getElementById("nav-links").style.left = "-150%";
+    }
+}

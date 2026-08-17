@@ -6,193 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - CoreX</title>
 
-    <!-- All in one css  -->
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- About page css  -->
-    <link rel="stylesheet" href="css/about.css">
-
     <!-- fontawesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" />
 
     <!-- Bootstrap Link  -->
-    <link rel="stylesheet" href="bootstrap/Bootstrap.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- All in one css  -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Owl Carousel CSS  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.green.min.css" />
 
-    <link rel="stylesheet" href="owlCarousel/css/owl.carousel.css" />
-    <link rel="stylesheet" href="owlCarousel/css/owl.theme.green.css" />
-
-
-    <style>
-        .about-para {
-            color: var(--grey-color);
-        }
-
-        .card {
-            background: var(--darkgrey-color);
-            color: var(--white-color);
-            text-align: center;
-            display: flex;
-            align-items: center;
-            transition: .5s;
-        }
-
-        .card i {
-            font-size: 120px;
-        }
-
-        .about-customers .card p {
-            color: var(--grey-color);
-            text-transform: uppercase;
-        }
-
-        .what-offer p {
-            color: var(--lightgrey-color);
-        }
-
-        .what-offer .card:hover {
-            border: 1px solid var(--primary-color);
-            background: #1f1f1f;
-
-        }
-
-        section.why-stand-out {
-            color: var(--grey-color);
-        }
-
-        .profile-card {
-            /* width: 350px; */
-            /* height: 500px; */
-            border-radius: 10px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .profile-card::before {
-            content: '';
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background: rgba(0, 0, 0, 0.7);
-            opacity: 0;
-            transition: .4s;
-        }
-
-        .profile-card::after {
-            content: '';
-            width: 120%;
-            height: 120%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border: 1px solid rgb(124, 124, 124);
-            /* transform: scale(1.2); */
-            border-radius: 10px;
-            transition: .4s;
-        }
-
-        .profile-card:hover::before {
-            opacity: 1;
-        }
-
-        .profile-card:hover::after {
-            width: calc(100% - 20px);
-            height: calc(100% - 20px);
-        }
-
-        .profile-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .icon {
-            height: 40px;
-            width: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 1px solid rgb(182, 182, 182);
-            border-radius: 50%;
-            position: absolute;
-            transition: .5s;
-            z-index: 11;
-        }
-
-        .icon:hover {
-            background: white;
-        }
-
-        .icon:hover .f-icon {
-            color: #000000;
-        }
-
-        .icon1 {
-            transition: 1s;
-            top: 125px;
-            right: -20%;
-        }
-
-        .icon2 {
-            transition: .75s;
-            top: 75px;
-            right: -20%;
-        }
-
-        .icon3 {
-            transition: .5s;
-            top: 25px;
-            right: -20%;
-        }
-
-        .profile-card:hover .icon {
-            right: 20px;
-        }
-
-        .f-icon {
-            color: rgb(180, 180, 180);
-            transition: .5s;
-        }
-
-        .trainer-name {
-            color: rgb(226, 226, 226);
-            position: absolute;
-            bottom: 45px;
-            left: -100%;
-            font-size: 25px;
-            font-weight: 600;
-            transition: .5s;
-        }
-
-        .trainer-profession {
-            color: rgb(170, 170, 170);
-            position: absolute;
-            bottom: 25px;
-            left: -100%;
-            font-size: 18px;
-            transition: .75s;
-        }
-
-        .profile-card:hover .trainer-name {
-            left: 30px;
-        }
-
-        .profile-card:hover .trainer-profession {
-            left: 30px;
-        }
-
-        .owl-theme .owl-dots .owl-dot span {
-            background: rgb(117, 117, 117);
-        }
-
-        .owl-carousel .owl-dots .owl-dot.active span,
-        .owl-carousel .owl-dots .owl-dot:hover span {
-            background-color: rgb(255, 94, 0);
-        }
-    </style>
+    <!-- About page css  -->
+    <link rel="stylesheet" href="css/about.css">
 
 </head>
 
@@ -217,29 +45,33 @@
         <div class="sub-hero">
             <div class="sub-hero-content">
                 <div>
-                    <h2 class="sub-hero-title fs-1 fw-semibold"><span> Stronger</span> Every Day. Better <span>Every
-                            Day.
-                        </span></h2>
+                    <h2 class="sub-hero-title fs-1 fw-semibold">
+                        <span> Stronger</span> Every Day. Better <span>Every Day.</span>
+                    </h2>
                     <p class="sub-hero-para fs-5 mx-md-5 px-md-5"> We more than just a gym - we're community dedicated
-                        to
-                        helping you become <br>
-                        stronger, healthier, and more confident. </p>
+                        to helping you become <br class=" d-none d-lg-block"> stronger, healthier, and more confident.
+                    </p>
                 </div>
             </div>
         </div>
 
         <!-- Navbar Starts -->
-        <nav class="position-absolute top-0 w-100 d-flex justify-content-between align-items-center px-5">
+        <nav class="position-absolute top-0 w-100 d-flex justify-content-between align-items-center px-3 px-lg-5">
             <div class="logo fs-2 fw-semibold">Core<span>X</span></div>
-            <ul class="d-flex justify-content-between align-items-center m-0">
+            <ul class="m-0" id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html" class="active">About</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <a href="contact.html" class="button button-primary">Register Now</a>
             </ul>
+            <i class="bar fas fa-bars" onclick="showNav(this)"></i>
         </nav>
     </header>
+
+    <script>
+
+    </script>
 
     <section class="who-we-are py-5">
         <div class="container">
@@ -447,12 +279,12 @@
                     No fluff. Just iron and result
                 </p>
             </div>
-            <div class="col-12 col-sm-6 col-lg-4 py-2 mt-4">
+            <div class="col-12 col-sm-6 col-lg-4 py-2 mt-4 mt-lg-0">
                 <h4 class="fw-semibold"> opening hours </h4>
                 <p> Mon - Sat : 06:00 AM to 10:00 PM</p>
                 <p> Sun : 07:00 AM to 08:00 PM</p>
             </div>
-            <div class="col-12 col-sm-6 col-lg-3 py-2 mt-4">
+            <div class="col-12 col-sm-6 col-lg-3 py-2 mt-4 mt-lg-0">
                 <h4 class="fw-semibold mb-4"> follow the corex </h4>
                 <a href="#" class="social-icon"> <i class="fab fa-facebook-f"></i></a>
                 <a href="#" class="social-icon"> <i class="fab fa-youtube"></i></a>
@@ -476,8 +308,10 @@
 
     <script src="js/script.js"></script>
 
-    <script src="owlCarousel/js/jquery.min.js"></script>
-    <script src="owlCarousel/js/owl.carousel.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
     <script>
         $(document).ready(function () {
             $(".owl-carousel").owlCarousel({

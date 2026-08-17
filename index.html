@@ -6,55 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CoreX - A Gym website</title>
-
+    
     <!-- All in one css  -->
     <link rel="stylesheet" href="css/style.css">
-
+    
     <!-- Homepage css  -->
     <link rel="stylesheet" href="css/home.css">
 
+    <!-- Bootstrap Link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" >
+
     <!-- fontawesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" />
-
-    <!-- Bootstrap Link  -->
-    <link rel="stylesheet" href="bootstrap/Bootstrap.css">
-
-    <style>
-
-        section.hero {
-            z-index: 1;
-            background: #000;
-        }
-
-        img {
-            opacity: .3;
-        }
-
-        .hero-slides{
-            height: 900px;
-        }
-
-        .hero-slide:nth-child(1) {
-            background-image: url("assests/images/slider1.jpg");
-            background-position: center center;
-        }
-
-        .hero-slide:nth-child(2) {
-            background-image: url("assests/images/slider2.jpg");
-            background-position: center center;
-        }
-
-        .hero-slide:nth-child(3) {
-            background-image: url("assests/images/slider3.jpg");
-            background-position: center center;
-        }
-
-        /* Why choose us section CSS */
-        section .container {
-            padding: 100px 0;
-        }
-
-    </style>
 
 </head>
 
@@ -86,12 +49,8 @@
             <div class="container-fluid hero-content">
                 <div class="hero-copy ms-lg-3" id="heroCopy">
                     <p class="hero-kicker">
-                        <span class="accent">FITNESS</span> START
+                        <span class="accent">FITNESS</span> START WITH <span class="accent">ONE STEP</span>
                     </p>
-
-                    <h1 class="hero-title">
-                        WITH <span class="accent">ONE STEP</span>
-                    </h1>
 
                     <p class="hero-description">
                         Whether you're a beginner or a professional athlete,
@@ -136,15 +95,16 @@
         </section>
 
         <!-- Navbar Starts -->
-        <nav class="position-absolute top-0 w-100 d-flex justify-content-between align-items-center px-5">
+        <nav class="position-absolute top-0 w-100 d-flex justify-content-between align-items-center px-3 px-lg-5">
             <div class="logo fs-2 fw-semibold">Core<span>X</span></div>
-            <ul class="d-flex justify-content-between align-items-center m-0">
+            <ul class="m-0" id="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <a href="contact.html" class="button button-primary">Register Now</a>
             </ul>
+            <i class="bar fas fa-bars" onclick="showNav(this)"></i>
         </nav>
 
 
@@ -297,12 +257,12 @@
                     No fluff. Just iron and result
                 </p>
             </div>
-            <div class="col-12 col-sm-6 col-lg-4 py-2 mt-4">
+            <div class="col-12 col-sm-6 col-lg-4 py-2 mt-4 mt-lg-0">
                 <h4 class="fw-semibold"> opening hours </h4>
                 <p> Mon - Sat : 06:00 AM to 10:00 PM</p>
                 <p> Sun : 07:00 AM to 08:00 PM</p>
             </div>
-            <div class="col-12 col-sm-6 col-lg-3 py-2 mt-4">
+            <div class="col-12 col-sm-6 col-lg-3 py-2 mt-4 mt-lg-0">
                 <h4 class="fw-semibold mb-4"> follow the corex </h4>
                 <a href="#" class="social-icon"> <i class="fab fa-facebook-f"></i></a>
                 <a href="#" class="social-icon"> <i class="fab fa-youtube"></i></a>
