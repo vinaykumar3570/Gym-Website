@@ -6,15 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - CoreX</title>
 
-    <!-- fontawesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" />
+    <!-- All CDN included -->
+    <?php include "commonPhp/allCDN.php" ?>
 
-    <!-- Bootstrap Link  -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- All in one css  -->
-    <link rel="stylesheet" href="css/style.css">
-    
     <!-- Owl Carousel CSS  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.green.min.css" />
@@ -26,53 +20,15 @@
 
 <body onscroll="scrollFunction()">
 
-    <!-- Got to top button  -->
-    <a href="#top" id="gototop">
-        <i class="fas fa-arrow-up"></i>
-    </a>
+    <!-- FIxed button and top contact details  -->
+    <?php include "commonPhp/topDetails.php"?>
+    <!-- End Here-->
 
-    <!-- Navbar Top Details -->
-    <div id="top" class="top-details d-flex justify-content-around align-items-center">
-        <span> <i class="fas fa-location-dot"></i> Near Ganga Nagar, Mawana Road Meerut </span>
-        <span class="divider"></span>
-        <span> <i class="fas fa-phone"></i> +91-9874561230, +918974561230 </span>
-        <span class="divider"></span>
-        <span> <i class="fas fa-envelope"></i> corex.support@gmail.com </span>
-    </div>
+    <!-- Header Start  -->
+    <?php include "commonPhp/header2.php" ?>
+    <!-- Header End -->
 
-    <!-- Hero content and image -->
-    <header class="position-relative">
-        <div class="sub-hero">
-            <div class="sub-hero-content">
-                <div>
-                    <h2 class="sub-hero-title fs-1 fw-semibold">
-                        <span> Stronger</span> Every Day. Better <span>Every Day.</span>
-                    </h2>
-                    <p class="sub-hero-para fs-5 mx-md-5 px-md-5"> We more than just a gym - we're community dedicated
-                        to helping you become <br class=" d-none d-lg-block"> stronger, healthier, and more confident.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Navbar Starts -->
-        <nav class="position-absolute top-0 w-100 d-flex justify-content-between align-items-center px-3 px-lg-5">
-            <div class="logo fs-2 fw-semibold">Core<span>X</span></div>
-            <ul class="m-0" id="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <a href="contact.html" class="button button-primary">Register Now</a>
-            </ul>
-            <i class="bar fas fa-bars" onclick="showNav(this)"></i>
-        </nav>
-    </header>
-
-    <script>
-
-    </script>
-
+    <!-- Who we are section  -->
     <section class="who-we-are py-5">
         <div class="container">
             <h3 class="section-top-title"> Who we are </h3>
@@ -115,7 +71,9 @@
             </div>
         </div>
     </section>
+    <!-- Who we are section End -->
 
+    <!-- What we offer section start -->
     <section class="what-offer py-5">
         <div class="container">
             <h2 class="section-title"> what we offer </h2>
@@ -147,8 +105,10 @@
             </div>
         </div>
     </section>
+    <!-- What we offer section end -->
 
 
+    <!-- Why we stand out Section start -->
     <section class="why-stand-out py-5">
         <div class="container">
             <p class="section-top-title"> why we stand out </p>
@@ -187,8 +147,9 @@
             </div>
         </div>
     </section>
+    <!-- Why we stand out section end -->
 
-
+    <!-- Trainers Section start -->
     <section class="trainers py-5">
         <div class="container">
             <h2 class="section-title mb-5"> meet our trainers </h2>
@@ -256,63 +217,31 @@
             </div>
         </div>
     </section>
+    <!-- Trainers Section End -->
 
+   <!-- Join Today Section Start Here  -->
+   <?php include "commonPhp/join_today.php" ?>
+    <!-- Join Today Section End Here  -->
 
-    <section class="join-today px-lg-5 px-md-4 px-sm-3 px-2">
-        <div class="content text-center px-lg-5 px-md-4 px-sm-3 px-2">
-            <h1 class="text-uppercase fw-semibold"> Ready to start your fitness journey?</h1>
-            <p class="fs-5">Become part of our growing fitness family and experience guidance, modern facilities, and
-                personalized workout programs designed to help you achieve your goals.</p>
-            <a href="#" class="button button-secondary mt-3"> Join Today </a>
-        </div>
-    </section>
+    <!-- footer Section Start Here  -->
+    <?php include "commonPhp/footer.php" ?>
+    <!-- footer Section End Here  -->
 
-    <footer class="p-4">
-        <div class="row mb-5">
-            <div class="col-12 col-lg-5 logo-details pe-5">
-                <div class="d-flex">
-                    <span class="logo-side"></span>
-                    <div class="logo fs-2 fw-semibold">Core<span>X</span></div>
-                </div>
-                <p>
-                    A high-energy, elite strength and conditioning facility designed to push your athletic boundaries.
-                    No fluff. Just iron and result
-                </p>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-4 py-2 mt-4 mt-lg-0">
-                <h4 class="fw-semibold"> opening hours </h4>
-                <p> Mon - Sat : 06:00 AM to 10:00 PM</p>
-                <p> Sun : 07:00 AM to 08:00 PM</p>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-3 py-2 mt-4 mt-lg-0">
-                <h4 class="fw-semibold mb-4"> follow the corex </h4>
-                <a href="#" class="social-icon"> <i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-icon"> <i class="fab fa-youtube"></i></a>
-                <a href="#" class="social-icon"> <i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-icon"> <i class="fab fa-x-twitter"></i></a>
-            </div>
-        </div>
-
-        <div class="row footer-bottom">
-            <div class="col-12 col-md-8 text-uppercase">
-                &copy; 2026 corex fitness. all right reserved
-            </div>
-            <div class="col-6 mt-3 col-md-2">
-                <a href="#"> Privacy Policy </a>
-            </div>
-            <div class="col-6 mt-3 col-md-2">
-                <a href="#"> Terms of Service </a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="js/script.js"></script>
+    <!-- JS Files CDN  -->
+   <?php include "commonPhp/JavaScript_links.php" ?>
 
     <!-- Owl Carousel JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
     <script>
+        let subHeroTitle = document.querySelectorAll(".sub-hero-title");
+        let subHeroPara = document.querySelectorAll(".sub-hero-para");
+
+        subHeroTitle[0].innerHTML = "<span> Stronger</span> Every Day. Better <span>Every Day.</span>"
+        subHeroPara[0].innerHTML = " We more than just a gym - we're community dedicated to helping you become <br class='d-none d-lg-block'> stronger, healthier, and more confident."
+
+
         $(document).ready(function () {
             $(".owl-carousel").owlCarousel({
                 center: true,

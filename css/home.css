@@ -119,8 +119,14 @@ body {
   text-transform: uppercase;
 }
 
-.hero-kicker .accent {
+span.accent {
   color: var(--primary-color);
+  /* color: red; */
+}
+h1{
+  font-size: 50px;
+  color: var(--white-color) ;
+  font-weight: 700;;
 }
 
 .hero-description {
@@ -211,8 +217,8 @@ body {
 
 /* Match the reference: arrows are diagonally offset. */
 #prevSlide {
-  left: 0;
-  bottom: 0;
+  /* left: 0; */
+  /* bottom: 0; */
   transform: scale(1.5);
   /* margin-right: 20px; */
 }

@@ -7,14 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CoreX - Pricing </title>
 
-    <!-- fontawesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" />
-
-    <!-- Bootstrap Link  -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" >
-
-    <!-- All in one css  -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- All CDN included -->
+    <?php include "commonPhp/allCDN.php" ?>
 
     <!-- Homepage css  -->
     <link rel="stylesheet" href="css/pricing.css">
@@ -23,47 +17,16 @@
 
 <body onscroll="scrollFunction()">
 
-    <!-- Got to top button  -->
-    <a href="#top" id="gototop">
-        <i class="fas fa-arrow-up"></i>
-    </a>
+    <!-- FIxed button and top contact details  -->
+    <?php include "commonPhp/topDetails.php" ?>
+    <!-- End Here-->
 
-    <!-- Navbar Top Details -->
-    <div id="top" class="top-details d-flex justify-content-around align-items-center">
-        <span> <i class="fas fa-location-dot"></i> Near Ganga Nagar, Mawana Road Meerut </span>
-        <span class="divider"></span>
-        <span> <i class="fas fa-phone"></i> +91-9874561230, +918974561230 </span>
-        <span class="divider"></span>
-        <span> <i class="fas fa-envelope"></i> corex.support@gmail.com </span>
-    </div>
-
-    <!-- Hero content and image -->
-    <header class="position-relative">
-        <div class="sub-hero">
-            <div class="sub-hero-content">
-                <div>
-                    <h2 class="sub-hero-title fs-1 fw-semibold">Choose Your <span>Better Plan</span></h2>
-                    <p class="sub-hero-para fs-5 mx-md-5 px-md-5">Whether you're just started or ready to take your
-                        training to the next level,  <br class=" d-none d-lg-block"> choose a membership that work for you. </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Navbar Starts -->
-        <nav class="position-absolute top-0 w-100 d-flex justify-content-between align-items-center px-3 px-lg-5">
-            <div class="logo fs-2 fw-semibold">Core<span>X</span></div>
-            <ul class="m-0" id="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="pricing.html" class="active">Pricing</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <a href="contact.html" class="button button-primary">Register Now</a>
-            </ul>
-            <i class="bar fas fa-bars" onclick="showNav(this)"></i>
-        </nav>
-    </header>
+    <!-- Header Start  -->
+    <?php include "commonPhp/header2.php" ?>
+    <!-- Header End -->
 
 
+    <!-- Pricing Section Starts here  -->
     <section class="pricing py-5">
         <div class="container">
             <p class="section-top-title">membership plan </p>
@@ -134,16 +97,16 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
+    <!-- Pricing Section End -->
 
 
+    <!-- Compare Plans Section Start  -->
     <section class="compare-plan py-5">
         <div class="container">
             <p class="section-top-title">compare plans </p>
             <h2 class="section-title mb-4"> find the plan that fits you </h2>
-
             <table class="table table-hover">
                 <thead>
                     <tr>
@@ -206,29 +169,25 @@
             </table>
         </div>
     </section>
+    <!-- Compare Plans Section End -->
 
 
+    <!-- FAQ Section Start  -->
     <section class="faq py-5">
         <div class="container">
             <h2 class="section-title mb-4"> frequently asked questions </h2>
-            <section class="faq-section">
+            <div class="faq-section">
 
                 <div class="accordion" id="faqAccordion">
 
                     <!-- FAQ 1 -->
                     <div class="accordion-item faq-item">
-
                         <h2 class="accordion-header">
-
-                            <button class="accordion-button faq-question" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#faqOne" aria-expanded="true" aria-controls="faqOne">
+                            <button class="accordion-button faq-question" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="true" aria-controls="faqOne">
                                 <span>Can I cancel my membership?</span>
-
                                 <span class="faq-icon"></span>
                             </button>
-
                         </h2>
-
                         <div id="faqOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                             <div class="faq-answer">
                                 <div class="faq-answer-inner">
@@ -236,25 +195,16 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
 
                     <!-- FAQ 2 -->
                     <div class="accordion-item faq-item">
-
                         <h2 class="accordion-header">
-
-                            <button class="accordion-button faq-question collapsed" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false"
-                                aria-controls="faqTwo">
+                            <button class="accordion-button faq-question collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">
                                 <span>Can beginners join the gym?</span>
-
                                 <span class="faq-icon"></span>
                             </button>
-
                         </h2>
-
                         <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                             <div class="faq-answer">
                                 <div class="faq-answer-inner">
@@ -262,25 +212,16 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
 
                     <!-- FAQ 3 -->
                     <div class="accordion-item faq-item">
-
                         <h2 class="accordion-header">
-
-                            <button class="accordion-button faq-question collapsed" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false"
-                                aria-controls="faqThree">
+                            <button class="accordion-button faq-question collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">
                                 <span>Do you offer personal training?</span>
-
                                 <span class="faq-icon"></span>
                             </button>
-
                         </h2>
-
                         <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                             <div class="faq-answer">
                                 <div class="faq-answer-inner">
@@ -288,25 +229,16 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
 
                     <!-- FAQ 4 -->
                     <div class="accordion-item faq-item">
-
                         <h2 class="accordion-header">
-
-                            <button class="accordion-button faq-question collapsed" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#faqFour" aria-expanded="false"
-                                aria-controls="faqFour">
+                            <button class="accordion-button faq-question collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFour" aria-expanded="false" aria-controls="faqFour">
                                 <span>Can I change my membership plan?</span>
-
                                 <span class="faq-icon"></span>
                             </button>
-
                         </h2>
-
                         <div id="faqFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                             <div class="faq-answer">
                                 <div class="faq-answer-inner">
@@ -314,25 +246,16 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
 
                     <!-- FAQ 5 -->
                     <div class="accordion-item faq-item">
-
                         <h2 class="accordion-header">
-
-                            <button class="accordion-button faq-question collapsed" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#faqFive" aria-expanded="false"
-                                aria-controls="faqFive">
+                            <button class="accordion-button faq-question collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFive" aria-expanded="false" aria-controls="faqFive">
                                 <span>Do you offer trial sessions?</span>
-
                                 <span class="faq-icon"></span>
                             </button>
-
                         </h2>
-
                         <div id="faqFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                             <div class="faq-answer">
                                 <div class="faq-answer-inner">
@@ -340,68 +263,32 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
-
-            </section>
-
+            </div>
         </div>
     </section>
+    <!-- FAQ Section End  -->
 
+    <!-- Join Today Section Start Here  -->
+    <?php include "commonPhp/join_today.php" ?>
+    <!-- Join Today Section End Here  -->
 
+    <!-- footer Section Start Here  -->
+    <?php include "commonPhp/footer.php" ?>
+    <!-- footer Section End Here  -->
 
-    <section class="join-today px-lg-5 px-md-4 px-sm-3 px-2">
-        <div class="content text-center px-lg-5 px-md-4 px-sm-3 px-2">
-            <h1 class="text-uppercase fw-semibold"> Ready to start your fitness journey?</h1>
-            <p class="fs-5">Become part of our growing fitness family and experience guidance, modern facilities, and
-                personalized workout programs designed to help you achieve your goals.</p>
-            <a href="#" class="button button-secondary mt-3"> Join Today </a>
-        </div>
-    </section>
+    <!-- JS Files CDN  -->
+    <?php include "commonPhp/JavaScript_links.php" ?>
 
-    <footer class="p-4">
-        <div class="row mb-5">
-            <div class="col-12 col-lg-5 logo-details pe-5">
-                <div class="d-flex">
-                    <span class="logo-side"></span>
-                    <div class="logo fs-2 fw-semibold">Core<span>X</span></div>
-                </div>
-                <p>
-                    A high-energy, elite strength and conditioning facility designed to push your athletic boundaries.
-                    No fluff. Just iron and result
-                </p>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-4 py-2 mt-4 mt-lg-0">
-                <h4 class="fw-semibold"> opening hours </h4>
-                <p> Mon - Sat : 06:00 AM to 10:00 PM</p>
-                <p> Sun : 07:00 AM to 08:00 PM</p>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-3 py-2 mt-4 mt-lg-0">
-                <h4 class="fw-semibold mb-4"> follow the corex </h4>
-                <a href="#" class="social-icon"> <i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-icon"> <i class="fab fa-youtube"></i></a>
-                <a href="#" class="social-icon"> <i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-icon"> <i class="fab fa-x-twitter"></i></a>
-            </div>
-        </div>
+    <script>
+        let subHeroTitle = document.querySelectorAll(".sub-hero-title");
+        let subHeroPara = document.querySelectorAll(".sub-hero-para");
 
-        <div class="row footer-bottom">
-            <div class="col-12 col-md-8 text-uppercase">
-                &copy; 2026 corex fitness. all right reserved
-            </div>
-            <div class="col-6 mt-3 col-md-2">
-                <a href="#"> Privacy Policy </a>
-            </div>
-            <div class="col-6 mt-3 col-md-2">
-                <a href="#"> Terms of Service </a>
-            </div>
-        </div>
-    </footer>
+        subHeroTitle[0].innerHTML = "<span> Choose</span> Your Fitness <span>Plan.</span>"
+        subHeroPara[0].innerHTML = "Whether you're just started or ready to take your training to the next level, <br class='d-none d-lg-block'> choose a membership that work for you."
+    </script>
 
-    <script src="js/script.js"></script>
-    <script src="bootstrap/Bootstrap_js_bundle.js"></script>
 </body>
 
 </html>

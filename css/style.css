@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #f64e00;
+  --primary-color: #e74900;
   /* --primary-color: #0094f6; */
   --white-color: #f0f0f0;
   --lightgrey-color: #d3d3d3;
@@ -136,8 +136,10 @@ p {
   justify-content: center;
   align-items: center;
   position: fixed;
-  bottom: 10%;
-  right: 5%;
+  bottom: 35px;
+  /* bottom: 10%; */
+  right: 35px;
+  /* right: 5%; */
   z-index: 5;
   border-radius: 5px;
 }
@@ -252,6 +254,7 @@ nav ul li a.active::before {
     flex-direction: column;
     justify-content: flex-start !important;
     transition: .5s;
+    padding-left: 0;
     /* border: 1px solid yellow; */
   }
 
@@ -287,6 +290,7 @@ nav ul li a.active::before {
   background: rgba(0, 0, 0, 0.7);
   color: var(--nochange-white);
   height: 100%;
+  width: 100%;
   position: absolute;
   top: 0;
   left: 0;
